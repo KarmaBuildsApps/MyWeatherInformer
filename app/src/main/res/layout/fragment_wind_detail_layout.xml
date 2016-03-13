@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_16sdp">
+
+    <TextView
+        android:id="@+id/tvWindTitle"
+        style="@style/weatherTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/_100sdp"
+        android:text="@string/tv_wind_title"
+        android:textAlignment="center"
+        android:textColor="@color/windTextColor" />
+
+    <ImageView
+        android:id="@+id/ivWindTitleIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvWindTitle"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_wind" />
+
+    <ImageView
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/compass" />
+
+    <ImageView
+        android:id="@+id/ivWindDirectionPointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/wind_pointer" />
+
+    <LinearLayout
+        android:id="@+id/llWindFieldSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <TextView
+            android:id="@+id/tvWindSpeed"
+            style="@style/weatherDataField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_wind_field_speed"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvWindSpeedValue"
+            style="@style/weatherData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_wind_default_speed"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+</RelativeLayout>

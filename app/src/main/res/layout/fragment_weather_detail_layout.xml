@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_16sdp">
+
+    <TextView
+        android:id="@+id/tvWeatherHeaderCity"
+        style="@style/weatherTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_weather_header_city"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/llWeatherHeaderDayDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWeatherHeaderCity"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvWeatherHeaderDate"
+            style="@style/weatherSubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_header_date" />
+
+        <TextView
+            android:id="@+id/tvWeatherHeaderDay"
+            style="@style/weatherSubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_header_day"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvWeatherTemp"
+        style="@style/tempStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llWeatherHeaderDayDate"
+        android:layout_marginLeft="@dimen/_26sdp"
+        android:text="@string/tv_weather_default_temp" />
+
+    <TextView
+        android:id="@+id/tvWeatherHeaderTempUnit"
+        style="@style/tempUnitStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvWeatherTemp"
+        android:layout_below="@id/llWeatherHeaderDayDate"
+        android:layout_toRightOf="@id/tvWeatherTemp"
+        android:text="@string/tv_weather_default_temp_unit" />
+
+    <ImageView
+        android:id="@+id/ivWeatherConIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvWeatherTemp"
+        android:layout_below="@id/llWeatherHeaderDayDate"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_toRightOf="@id/tvWeatherTemp"
+        android:minHeight="@dimen/_40sdp"
+        android:minWidth="@dimen/_50sdp"
+        android:src="@drawable/ic_action_rain" />
+
+    <TextView
+        android:id="@+id/tvWeatherFieldTempMinMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ivWeatherConIcon"
+        android:text="@string/tv_weather_min_max_temp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:id="@+id/tvWeatherTempMinMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvWeatherFieldTempMinMax"
+        android:text="@string/tv_weather_default_min_max_temp"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/tvWeatherDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvWeatherTemp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_marginRight="@dimen/_36sdp"
+        android:text="@string/tv_weather_description"
+        android:textSize="16sp"
+        android:textStyle="italic|bold" />
+
+    <LinearLayout
+        android:id="@+id/llWeatherFieldSunrise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWeatherDescription"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvWeatherFieldSunrise"
+            style="@style/weatherDataField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_field_sunrise" />
+
+        <TextView
+            android:id="@+id/tvWeatherSunriseValue"
+            style="@style/weatherData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_default_sunrise"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llWeatherFieldSunset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llWeatherFieldSunrise"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvWeatherFieldSunset"
+            style="@style/weatherDataField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_field_sunset" />
+
+        <TextView
+            android:id="@+id/tvWeatherSunsetValue"
+            style="@style/weatherData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_default_sunset"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llWeatherFieldPressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llWeatherFieldSunset"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvWeatherFieldPressure"
+            style="@style/weatherDataField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_field_pressure" />
+
+        <TextView
+            android:id="@+id/tvWeatherPressureValue"
+            style="@style/weatherData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_default_pressure"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llWeatherFieldHumidity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llWeatherFieldPressure"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvWeatherFieldHumidity"
+            style="@style/weatherDataField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_field_humidity" />
+
+        <TextView
+            android:id="@+id/tvWeatherHumidityValue"
+            style="@style/weatherData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/tv_weather_default_humidity"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>
