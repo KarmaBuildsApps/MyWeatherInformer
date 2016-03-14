@@ -1,7 +1,6 @@
-package myapp.tae.ac.uk.myweatherapp.ui;
+package myapp.tae.ac.uk.myweatherapp.ui.fragments;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +19,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import myapp.tae.ac.uk.myweatherapp.R;
 import myapp.tae.ac.uk.myweatherapp.constants.Constants;
-import myapp.tae.ac.uk.myweatherapp.model.WeatherInfo;
+import myapp.tae.ac.uk.myweatherapp.model.weather.WeatherInfo;
 
 /**
  * Created by Karma on 12/03/16.

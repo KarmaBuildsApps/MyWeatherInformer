@@ -4,9 +4,7 @@ import android.util.Log;
 
 import myapp.tae.ac.uk.myweatherapp.R;
 import myapp.tae.ac.uk.myweatherapp.api.IWeatherAPI;
-import myapp.tae.ac.uk.myweatherapp.constants.Constants;
-import myapp.tae.ac.uk.myweatherapp.model.WeatherInfo;
-import myapp.tae.ac.uk.myweatherapp.ui.AdapterViewPager;
+import myapp.tae.ac.uk.myweatherapp.model.weather.WeatherInfo;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

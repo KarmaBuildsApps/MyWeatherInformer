@@ -1,5 +1,5 @@
 
-package myapp.tae.ac.uk.myweatherapp.model;
+package myapp.tae.ac.uk.myweatherapp.model.weather;
 
 import java.util.ArrayList;
 import java.util.List;

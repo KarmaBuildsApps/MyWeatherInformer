@@ -28,5 +28,8 @@
     <string name="toolbar_search_view">Search</string>
     <string name="tv_weather_min_max_temp">Temp Min / Max</string>
     <string name="error_search_empty_text">Search can\'t be Empty</string>
+    <string name="autocomplete_text">Search City</string>
+    <string name="tv_wind_field_degree">Wind Direction</string>
+    <string name="tv_wind_default_degree">0</string>
 
 </resources>

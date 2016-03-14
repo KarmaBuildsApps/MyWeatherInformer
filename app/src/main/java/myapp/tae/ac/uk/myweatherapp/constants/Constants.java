@@ -18,4 +18,5 @@ public class Constants {
     public static final String MPH_UNIT = "MPH";
     public static final String PERCENTAGE = "%";
     public static final String PRESSURE_UNIT = "N/m²";
+    public static final String WIND_DEGREE_UNIT = "°";
 }

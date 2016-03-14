@@ -1,7 +1,7 @@
 package myapp.tae.ac.uk.myweatherapp.api;
 
 import myapp.tae.ac.uk.myweatherapp.constants.Constants;
-import myapp.tae.ac.uk.myweatherapp.model.WeatherInfo;
+import myapp.tae.ac.uk.myweatherapp.model.weather.WeatherInfo;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

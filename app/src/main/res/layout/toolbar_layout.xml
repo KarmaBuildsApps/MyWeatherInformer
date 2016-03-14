@@ -6,4 +6,12 @@
     android:background="#2196F3"
     android:minHeight="?attr/actionBarSize">
 
+    <!--<AutoCompleteTextView-->
+        <!--android:id="@+id/actvToolbarSearch"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginRight="@dimen/_60sdp"-->
+        <!--android:hint="@string/autocomplete_text"-->
+        <!--android:padding="@dimen/_6sdp"-->
+        <!--android:textSize="18sp" />-->
 </android.support.v7.widget.Toolbar>

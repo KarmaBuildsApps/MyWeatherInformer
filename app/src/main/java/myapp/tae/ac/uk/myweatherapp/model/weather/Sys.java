@@ -1,5 +1,5 @@
 
-package myapp.tae.ac.uk.myweatherapp.model;
+package myapp.tae.ac.uk.myweatherapp.model.weather;
 
 import javax.annotation.Generated;
 

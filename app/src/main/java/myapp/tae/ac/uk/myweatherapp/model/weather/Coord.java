@@ -1,7 +1,5 @@
 
-package myapp.tae.ac.uk.myweatherapp.model;
-
-import javax.annotation.Generated;
+package myapp.tae.ac.uk.myweatherapp.model.weather;
 
 import android.os.Parcel;
 import android.os.Parcelable;

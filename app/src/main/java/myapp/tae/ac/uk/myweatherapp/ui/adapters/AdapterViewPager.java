@@ -1,8 +1,11 @@
-package myapp.tae.ac.uk.myweatherapp.ui;
+package myapp.tae.ac.uk.myweatherapp.ui.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import myapp.tae.ac.uk.myweatherapp.ui.fragments.FragmentTodayWeather;
+import myapp.tae.ac.uk.myweatherapp.ui.fragments.FragmentWindIfo;
 
 /**
  * Created by Karma on 12/03/16.

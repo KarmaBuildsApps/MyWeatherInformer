@@ -1,11 +1,9 @@
 package myapp.tae.ac.uk.myweatherapp.presenter;
 
-import android.support.v4.app.FragmentManager;
 import android.view.View;
 
 import myapp.tae.ac.uk.myweatherapp.api.IWeatherAPI;
-import myapp.tae.ac.uk.myweatherapp.model.WeatherInfo;
-import myapp.tae.ac.uk.myweatherapp.ui.AdapterViewPager;
+import myapp.tae.ac.uk.myweatherapp.model.weather.WeatherInfo;
 
 /**
  * Created by Karma on 11/03/16.
