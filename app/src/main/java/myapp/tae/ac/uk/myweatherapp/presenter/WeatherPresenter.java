@@ -1,6 +1,11 @@
 package myapp.tae.ac.uk.myweatherapp.presenter;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
+
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import myapp.tae.ac.uk.myweatherapp.R;
 import myapp.tae.ac.uk.myweatherapp.api.IWeatherAPI;
@@ -15,6 +20,7 @@ import retrofit2.Response;
 public class WeatherPresenter {
     private IWeatherView view;
     private IWeatherAPI mIWeatherAPI;
+    private GooglePlaceService placeService;
 
     public WeatherPresenter(IWeatherView view, IWeatherAPI weatherAPI) {
         this.view = view;
@@ -42,5 +48,19 @@ public class WeatherPresenter {
 
     public void updateWeatherViews(WeatherInfo weatherInfo) {
         view.updateWeatherViews(weatherInfo);
+    }
+
+    public void setGooglePlaceService(GooglePlaceService googlePlaceService) {
+        this.placeService = googlePlaceService;
+    }
+
+    public Cursor getPlaceAutocompleteCursor(String newText) {
+        if (placeService == null)
+            return null;
+        return placeService.getPlacePrediction(newText);
+    }
+
+    public void setGoogleApiClientForPlaceService(GoogleApiClient googleApiClient) {
+        placeService.setGoogleApiClient(googleApiClient);
     }
 }

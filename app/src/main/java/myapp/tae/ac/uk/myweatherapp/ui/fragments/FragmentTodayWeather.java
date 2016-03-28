@@ -2,6 +2,7 @@ package myapp.tae.ac.uk.myweatherapp.ui.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -25,6 +27,7 @@ import myapp.tae.ac.uk.myweatherapp.model.weather.WeatherInfo;
  * Created by Karma on 12/03/16.
  */
 public class FragmentTodayWeather extends Fragment {
+    private static final String TAG = FragmentTodayWeather.class.getSimpleName();
     @Bind(R.id.tvWeatherHeaderCity)
     TextView tvWeatherHeaderCity;
     @Bind(R.id.tvWeatherHeaderDate)
@@ -77,8 +80,10 @@ public class FragmentTodayWeather extends Fragment {
     }
 
     private String getTime(Integer time) {
-        Date date = new Date(time * 1000);
+        Log.i(TAG, "getTime: " + time);
+        Date date = new Date((long) time * 1000);
         SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.ENGLISH);
+        timeFormat.setTimeZone(TimeZone.getDefault());
         return timeFormat.format(date);
     }
 

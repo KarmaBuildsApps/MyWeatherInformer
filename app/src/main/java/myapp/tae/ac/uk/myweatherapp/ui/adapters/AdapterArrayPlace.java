@@ -2,32 +2,28 @@ package myapp.tae.ac.uk.myweatherapp.ui.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.places.AutocompleteFilter;
-import com.google.android.gms.location.places.Place;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import java.util.ArrayList;
 
-import myapp.tae.ac.uk.myweatherapp.R;
-import myapp.tae.ac.uk.myweatherapp.model.google.PlaceAutoComplete;
+import myapp.tae.ac.uk.myweatherapp.model.google.PlaceAutoCompleteData;
 import myapp.tae.ac.uk.myweatherapp.presenter.WeatherService;
 
 /**
  * Created by Karma on 13/03/16.
  */
-public class AdapterArrayPlace extends ArrayAdapter<PlaceAutoComplete> implements Filterable {
+public class AdapterArrayPlace extends ArrayAdapter<PlaceAutoCompleteData> implements Filterable {
     private Context context;
     private LatLngBounds mLimitSearchLatLngBounds;
     private AutocompleteFilter mSearchAutoCompleteFilter;
-    private ArrayList<PlaceAutoComplete> mSearchResults;
+    private ArrayList<PlaceAutoCompleteData> mSearchResults;
     private WeatherService mService;
 
     public AdapterArrayPlace(Context context, int resource, LatLngBounds bounds, AutocompleteFilter filter) {
@@ -46,7 +42,7 @@ public class AdapterArrayPlace extends ArrayAdapter<PlaceAutoComplete> implement
     }
 
     @Override
-    public PlaceAutoComplete getItem(int position) {
+    public PlaceAutoCompleteData getItem(int position) {
         return mSearchResults.get(position);
     }
 

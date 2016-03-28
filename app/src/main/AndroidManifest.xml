@@ -14,6 +14,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/apiKey" />
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -29,6 +30,16 @@
             <!--android:name="android.app.searchable"-->
             <!--android:resource="@xml/searchable" />-->
         </activity>
+        <!--<activity-->
+        <!--android:name=".ui.SearchableActivity"-->
+        <!--android:launchMode="singleTop">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.SEARCH" />-->
+        <!--</intent-filter>-->
+        <!--<meta-data-->
+        <!--android:name="android.app.searchable"-->
+        <!--android:resource="@xml/searchable" />-->
+        <!--</activity>-->
     </application>
 
 </manifest>

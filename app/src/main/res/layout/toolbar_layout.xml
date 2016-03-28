@@ -6,12 +6,14 @@
     android:background="#2196F3"
     android:minHeight="?attr/actionBarSize">
 
-    <!--<AutoCompleteTextView-->
-        <!--android:id="@+id/actvToolbarSearch"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_marginRight="@dimen/_60sdp"-->
-        <!--android:hint="@string/autocomplete_text"-->
-        <!--android:padding="@dimen/_6sdp"-->
-        <!--android:textSize="18sp" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/action_searchAutocomplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
 </android.support.v7.widget.Toolbar>

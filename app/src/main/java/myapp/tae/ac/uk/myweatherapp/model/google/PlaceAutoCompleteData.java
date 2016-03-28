@@ -3,7 +3,7 @@ package myapp.tae.ac.uk.myweatherapp.model.google;
 /**
  * Created by Karma on 13/03/16.
  */
-public class PlaceAutoComplete {
+public class PlaceAutoCompleteData {
     private String mId;
     private String mCityName;
     private String mCountry;
